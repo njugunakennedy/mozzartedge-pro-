@@ -429,8 +429,11 @@ class MozzartedgeApp {
 
     async loadPredictionsData() {
         try {
-            const response = await fetch('data.json');
-            this.predictionsData = await response.json();
+            // Use the data shuffler to get daily shuffled predictions
+            this.predictionsData = await getDailyShuffledData();
+            if (!this.predictionsData) {
+                throw new Error('Failed to load shuffled data');
+            }
         } catch (error) {
             console.error('Error loading predictions data:', error);
             // Fallback data if JSON file is not available

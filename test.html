@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Shuffler Test - Mozzartedge Pro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .platform {
+            margin-bottom: 30px;
+        }
+        .platform h3 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        .match {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+        }
+        .match-info {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 10px;
+            align-items: center;
+        }
+        .prediction {
+            font-weight: bold;
+            color: #28a745;
+        }
+        .odds {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .confidence {
+            color: #6c757d;
+        }
+        .date-selector {
+            margin-bottom: 20px;
+        }
+        .date-selector input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .date-selector button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .date-selector button:hover {
+            background: #0056b3;
+        }
+        .info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Shuffler Test - Mozzartedge Pro</h1>
+        
+        <div class="info">
+            <h3>How it works:</h3>
+            <p>This page demonstrates the daily data shuffling functionality. The predictions will be different each day based on the current date. You can test different dates to see how the data changes.</p>
+            <p><strong>Current Date:</strong> <span id="current-date"></span></p>
+        </div>
+
+        <div class="date-selector">
+            <label for="test-date">Test with different date:</label>
+            <input type="date" id="test-date">
+            <button onclick="loadDataForDate()">Load Data for Date</button>
+            <button onclick="loadTodayData()">Load Today's Data</button>
+        </div>
+
+        <div id="data-display">
+            <!-- Data will be loaded here -->
+        </div>
+    </div>
+
+    <script src="dataShuffler.js"></script>
+    <script>
+        // Display current date
+        document.getElementById('current-date').textContent = new Date().toDateString();
+
+        // Set today's date as default in the date picker
+        document.getElementById('test-date').value = new Date().toISOString().split('T')[0];
+
+        // Load today's data by default
+        loadTodayData();
+
+        async function loadTodayData() {
+            const data = await getDailyShuffledData();
+            displayData(data, 'Today\'s Shuffled Data');
+        }
+
+        async function loadDataForDate() {
+            const dateInput = document.getElementById('test-date');
+            const selectedDate = new Date(dateInput.value);
+            
+            if (isNaN(selectedDate.getTime())) {
+                alert('Please select a valid date');
+                return;
+            }
+
+            const data = await getDataForSpecificDate(selectedDate);
+            displayData(data, `Data for ${selectedDate.toDateString()}`);
+        }
+
+        function displayData(data, title) {
+            const container = document.getElementById('data-display');
+            
+            if (!data) {
+                container.innerHTML = '<p style="color: red;">Error loading data</p>';
+                return;
+            }
+
+            let html = `<h2>${title}</h2>`;
+
+            // Display Mozzartedge predictions
+            html += '<div class="platform">';
+            html += '<h3>Mozzartedge Predictions</h3>';
+            data.mozzartedge.forEach(match => {
+                html += `
+                    <div class="match">
+                        <div class="match-info">
+                            <div><strong>${match.match}</strong> (${match.kickoff})</div>
+                            <div class="prediction">${match.prediction}</div>
+                            <div class="odds">${match.odds}</div>
+                            <div class="confidence">${match.confidence}%</div>
+                        </div>
+                    </div>
+                `;
+            });
+            html += '</div>';
+
+            // Display Betika predictions
+            html += '<div class="platform">';
+            html += '<h3>Betika Predictions</h3>';
+            data.betika.forEach(match => {
+                html += `
+                    <div class="match">
+                        <div class="match-info">
+                            <div><strong>${match.match}</strong> (${match.kickoff})</div>
+                            <div class="prediction">${match.prediction}</div>
+                            <div class="odds">${match.odds}</div>
+                            <div class="confidence">${match.confidence}%</div>
+                        </div>
+                    </div>
+                `;
+            });
+            html += '</div>';
+
+            // Display Odibet predictions
+            html += '<div class="platform">';
+            html += '<h3>Odibet Predictions</h3>';
+            data.odibet.forEach(match => {
+                html += `
+                    <div class="match">
+                        <div class="match-info">
+                            <div><strong>${match.match}</strong> (${match.kickoff})</div>
+                            <div class="prediction">${match.prediction}</div>
+                            <div class="odds">${match.odds}</div>
+                            <div class="confidence">${match.confidence}%</div>
+                        </div>
+                    </div>
+                `;
+            });
+            html += '</div>';
+
+            container.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
