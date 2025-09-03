@@ -1,4 +1,388 @@
-// Mozzartedge Virtual Leagues SPA - Main JavaScript
+// Mozzartedge Virtual Leagues SPA - Main JavaScript with Routing
+class Router {
+    constructor() {
+        this.routes = {
+            '/': 'index.html',
+            '/index': 'index.html',
+            '/results': 'results.html',
+            '/blog': 'blog.html'
+        };
+        this.currentPage = null;
+        this.init();
+    }
+
+    init() {
+        this.setupEventListeners();
+        this.handleInitialRoute();
+    }
+
+    setupEventListeners() {
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', (e) => {
+            this.navigateToPage(window.location.pathname, false);
+        });
+
+        // Intercept all navigation links
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('a');
+            if (link && this.isInternalLink(link.href)) {
+                e.preventDefault();
+                const path = this.getPathFromUrl(link.href);
+                this.navigateToPage(path);
+            }
+        });
+
+        // Handle form submissions that should trigger navigation
+        document.addEventListener('submit', (e) => {
+            const form = e.target;
+            if (form.dataset.navigate) {
+                e.preventDefault();
+                this.navigateToPage(form.dataset.navigate);
+            }
+        });
+    }
+
+    isInternalLink(url) {
+        const currentOrigin = window.location.origin;
+        return url.startsWith(currentOrigin) || url.startsWith('/');
+    }
+
+    getPathFromUrl(url) {
+        try {
+            const urlObj = new URL(url, window.location.origin);
+            return urlObj.pathname;
+        } catch {
+            // Handle relative URLs
+            return url.startsWith('/') ? url : '/' + url;
+        }
+    }
+
+    async navigateToPage(path, updateHistory = true) {
+        const targetFile = this.routes[path] || this.routes['/'];
+        
+        if (updateHistory) {
+            window.history.pushState({ path }, '', path);
+        }
+
+        try {
+            await this.loadPage(targetFile);
+            this.currentPage = path;
+            this.updateActiveNavigation(path);
+            this.scrollToTop();
+        } catch (error) {
+            console.error('Navigation error:', error);
+            this.showErrorPage();
+        }
+    }
+
+    async loadPage(filename) {
+        const response = await fetch(filename);
+        if (!response.ok) {
+            throw new Error(`Failed to load ${filename}`);
+        }
+
+        const html = await response.text();
+        const parser = new DOMParser();
+        const newDoc = parser.parseFromString(html, 'text/html');
+
+        // Update the document title
+        document.title = newDoc.title;
+
+        // Update the main content
+        const newBody = newDoc.body;
+        const currentBody = document.body;
+
+        // Preserve the navbar and mobile nav
+        const navbar = currentBody.querySelector('.navbar');
+        const mobileNav = currentBody.querySelector('.mobile-nav');
+        const footer = currentBody.querySelector('.footer');
+
+        // Clear current body
+        currentBody.innerHTML = '';
+
+        // Add back the preserved elements
+        if (navbar) currentBody.appendChild(navbar);
+        if (mobileNav) currentBody.appendChild(mobileNav);
+        if (footer) currentBody.appendChild(footer);
+
+        // Add the new content
+        const newContent = newBody.querySelector('main') || newBody;
+        currentBody.appendChild(newContent);
+
+        // Reinitialize the app for the new page
+        this.reinitializePage();
+    }
+
+    reinitializePage() {
+        // Reinitialize the main app
+        if (window.mozzartedgeApp) {
+            window.mozzartedgeApp.destroy();
+        }
+        window.mozzartedgeApp = new MozzartedgeApp();
+
+        // Reinitialize page-specific functionality
+        this.initializePageSpecificFeatures();
+    }
+
+    initializePageSpecificFeatures() {
+        const currentPath = window.location.pathname;
+        
+        if (currentPath === '/results' || currentPath === '/results.html') {
+            this.initializeResultsPage();
+        } else if (currentPath === '/blog' || currentPath === '/blog.html') {
+            this.initializeBlogPage();
+        } else {
+            this.initializeHomePage();
+        }
+    }
+
+    initializeResultsPage() {
+        // Results page specific initialization
+        this.loadResultsData();
+        this.setupResultsFilters();
+    }
+
+    initializeBlogPage() {
+        // Blog page specific initialization
+        this.loadBlogPosts();
+        this.setupBlogSearch();
+    }
+
+    initializeHomePage() {
+        // Home page specific initialization
+        this.setupHomePageAnimations();
+    }
+
+    async loadResultsData() {
+        try {
+            const response = await fetch('data.json');
+            const data = await response.json();
+            this.renderResultsTable(data.results || []);
+        } catch (error) {
+            console.error('Error loading results data:', error);
+            this.renderResultsTable(this.getFallbackResultsData());
+        }
+    }
+
+    getFallbackResultsData() {
+        return [
+            {
+                date: '2024-01-15',
+                match: 'FC Torino vs London City',
+                prediction: 'Over 2.5',
+                result: '3-2',
+                status: 'won',
+                profit: '+115'
+            },
+            {
+                date: '2024-01-14',
+                match: 'Paris United vs Berlin FC',
+                prediction: 'GG',
+                result: '2-1',
+                status: 'won',
+                profit: '+85'
+            },
+            {
+                date: '2024-01-13',
+                match: 'Madrid Stars vs Rome Warriors',
+                prediction: '1 & Over',
+                result: '0-1',
+                status: 'lost',
+                profit: '-100'
+            }
+        ];
+    }
+
+    renderResultsTable(results) {
+        const tbody = document.querySelector('#results-tbody');
+        if (!tbody) return;
+
+        tbody.innerHTML = '';
+        results.forEach(result => {
+            const row = this.createResultRow(result);
+            tbody.appendChild(row);
+        });
+    }
+
+    createResultRow(result) {
+        const row = document.createElement('tr');
+        const statusClass = result.status === 'won' ? 'result-won' : 'result-lost';
+        const profitClass = result.profit.startsWith('+') ? 'profit-positive' : 'profit-negative';
+        
+        row.className = statusClass;
+        row.innerHTML = `
+            <td>${result.date}</td>
+            <td class="match-cell">${result.match}</td>
+            <td>${result.prediction}</td>
+            <td>${result.result}</td>
+            <td>
+                <span class="status-badge ${result.status}">
+                    ${result.status === 'won' ? '✅ WON' : '❌ LOST'}
+                </span>
+            </td>
+            <td class="${profitClass}">${result.profit}</td>
+        `;
+        
+        return row;
+    }
+
+    async loadBlogPosts() {
+        try {
+            const response = await fetch('data.json');
+            const data = await response.json();
+            this.renderBlogPosts(data.blog || []);
+        } catch (error) {
+            console.error('Error loading blog posts:', error);
+            this.renderBlogPosts(this.getFallbackBlogData());
+        }
+    }
+
+    getFallbackBlogData() {
+        return [
+            {
+                title: 'How to Maximize Your Virtual League Winnings',
+                excerpt: 'Learn the strategies that top players use to consistently win in virtual leagues...',
+                category: 'Strategy',
+                date: '2024-01-15',
+                author: 'Mozzartedge Pro',
+                tags: ['strategy', 'winning', 'tips']
+            },
+            {
+                title: 'Understanding Virtual League Patterns',
+                excerpt: 'Discover the hidden patterns in virtual league matches that can help you predict outcomes...',
+                category: 'Analysis',
+                date: '2024-01-14',
+                author: 'Mozzartedge Pro',
+                tags: ['analysis', 'patterns', 'prediction']
+            }
+        ];
+    }
+
+    renderBlogPosts(posts) {
+        const container = document.querySelector('.blog-articles');
+        if (!container) return;
+
+        container.innerHTML = '';
+        posts.forEach(post => {
+            const article = this.createBlogArticle(post);
+            container.appendChild(article);
+        });
+    }
+
+    createBlogArticle(post) {
+        const article = document.createElement('article');
+        article.className = 'blog-article';
+        article.innerHTML = `
+            <div class="article-content">
+                <div class="article-category">${post.category}</div>
+                <h2 class="article-title">${post.title}</h2>
+                <div class="article-meta">
+                    <span><i class="fas fa-calendar"></i> ${post.date}</span>
+                    <span><i class="fas fa-user"></i> ${post.author}</span>
+                </div>
+                <p class="article-excerpt">${post.excerpt}</p>
+                <div class="article-tags">
+                    ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
+            </div>
+        `;
+        
+        return article;
+    }
+
+    setupResultsFilters() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const filter = e.target.dataset.filter;
+                this.filterResults(filter);
+            });
+        });
+    }
+
+    filterResults(filter) {
+        const rows = document.querySelectorAll('#results-tbody tr');
+        rows.forEach(row => {
+            const status = row.querySelector('.status-badge').textContent.includes('WON') ? 'won' : 'lost';
+            if (filter === 'all' || status === filter) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    }
+
+    setupBlogSearch() {
+        const searchInput = document.querySelector('.search-box input');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                this.searchBlogPosts(e.target.value);
+            });
+        }
+    }
+
+    searchBlogPosts(query) {
+        const articles = document.querySelectorAll('.blog-article');
+        articles.forEach(article => {
+            const title = article.querySelector('.article-title').textContent.toLowerCase();
+            const excerpt = article.querySelector('.article-excerpt').textContent.toLowerCase();
+            const tags = Array.from(article.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
+            
+            const matches = title.includes(query.toLowerCase()) || 
+                           excerpt.includes(query.toLowerCase()) ||
+                           tags.some(tag => tag.includes(query.toLowerCase()));
+            
+            article.style.display = matches ? '' : 'none';
+        });
+    }
+
+    setupHomePageAnimations() {
+        // Reinitialize animations for home page
+        if (window.mozzartedgeApp) {
+            window.mozzartedgeApp.setupAnimations();
+        }
+    }
+
+    updateActiveNavigation(path) {
+        // Update navigation active states
+        const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+        navLinks.forEach(link => {
+            const linkPath = this.getPathFromUrl(link.href);
+            if (linkPath === path) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
+
+    scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    showErrorPage() {
+        document.body.innerHTML = `
+            <div style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
+                <h1>Page Not Found</h1>
+                <p>The page you're looking for doesn't exist.</p>
+                <button onclick="window.router.navigateToPage('/')" class="btn btn-primary">Go Home</button>
+            </div>
+        `;
+    }
+
+    handleInitialRoute() {
+        const path = window.location.pathname;
+        if (path !== '/' && !this.routes[path]) {
+            this.navigateToPage('/');
+        } else {
+            this.initializePageSpecificFeatures();
+        }
+    }
+}
+
 class MozzartedgeApp {
     constructor() {
         this.currentTab = 'mozzartedge';
@@ -15,7 +399,23 @@ class MozzartedgeApp {
         this.setupAnimations();
     }
 
+    destroy() {
+        // Clean up event listeners and resources
+        this.removeEventListeners();
+    }
+
+    removeEventListeners() {
+        // Remove all event listeners to prevent memory leaks
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        tabButtons.forEach(button => {
+            button.removeEventListener('click', this.switchTab);
+        });
+    }
+
     setCurrentDate() {
+        const dateElement = document.getElementById('current-date');
+        if (!dateElement) return;
+        
         const today = new Date();
         const options = { 
             weekday: 'long', 
@@ -24,7 +424,7 @@ class MozzartedgeApp {
             day: 'numeric' 
         };
         const dateString = today.toLocaleDateString('en-US', options);
-        document.getElementById('current-date').textContent = dateString;
+        dateElement.textContent = dateString;
     }
 
     async loadPredictionsData() {
@@ -376,8 +776,9 @@ class MozzartedgeApp {
     }
 }
 
-// Initialize the app when DOM is loaded
+// Initialize the router and app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    window.router = new Router();
     window.mozzartedgeApp = new MozzartedgeApp();
 });
 

@@ -44,218 +44,220 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-background">
-            <div class="hexagon-pattern"></div>
-        </div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Dominate all Virtual Leagues</h1>
-                <p class="hero-subtitle">Get data-driven predictions for Virtual & Virtual Instant leagues. Maximize your winning chances this evening.</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="scrollToSection('predictions')">
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-background">
+                <div class="hexagon-pattern"></div>
+            </div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Dominate all Virtual Leagues</h1>
+                    <p class="hero-subtitle">Get data-driven predictions for Virtual & Virtual Instant leagues. Maximize your winning chances this evening.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToSection('predictions')">
+                            <i class="fas fa-chart-line"></i>
+                            View Today's Free Predictions
+                        </button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('premium')">
+                            <i class="fas fa-crown"></i>
+                            Go Premium
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-video-container">
+                        <video class="hero-video" autoplay muted loop playsinline>
+                            <source src="Video/vfl.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Watch Our Success Story</span>
+                        </div>
+                    </div>
+                    <div class="trophy-3d">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="chart-3d">
                         <i class="fas fa-chart-line"></i>
-                        View Today's Free Predictions
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How We Generate Wins</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-spider"></i>
+                        </div>
+                        <h3>Data Scraping</h3>
+                        <p>We meticulously track thousands of virtual matches across both leagues.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Algorithm Analysis</h3>
+                        <p>Our proprietary model analyzes team patterns, odds history, and goal probabilities.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-crystal-ball"></i>
+                        </div>
+                        <h3>Smart Predictions</h3>
+                        <p>We deliver the most probable winning outcomes straight to your phone every evening.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Predictions Section -->
+        <section class="predictions" id="predictions">
+            <div class="container">
+                <h2 class="section-title">Today's Predictions - <span id="current-date"></span></h2>
+                
+                <!-- Tabs -->
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="mozzartedge">
+                        <i class="fas fa-trophy"></i>
+                        Mozzartedge
                     </button>
-                    <button class="btn btn-secondary" onclick="scrollToSection('premium')">
-                        <i class="fas fa-crown"></i>
-                        Go Premium
+                    <button class="tab-btn" data-tab="betika">
+                        <i class="fas fa-bolt"></i>
+                        Betika
+                    </button>
+                    <button class="tab-btn" data-tab="odibet">
+                        <i class="fas fa-star"></i>
+                        Odibet
                     </button>
                 </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-video-container">
-                    <video class="hero-video" autoplay muted loop playsinline>
-                        <source src="Video/vfl.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video-overlay">
-                        <i class="fas fa-play-circle"></i>
-                        <span>Watch Our Success Story</span>
-                    </div>
-                </div>
-                <div class="trophy-3d">
-                    <i class="fas fa-trophy"></i>
-                </div>
-                <div class="chart-3d">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- How It Works Section -->
-    <section class="how-it-works" id="how-it-works">
-        <div class="container">
-            <h2 class="section-title">How We Generate Wins</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-spider"></i>
+                <!-- Tables -->
+                <div class="table-container">
+                    <div class="tab-content active" id="mozzartedge-content">
+                        <div class="table-wrapper">
+                            <table class="predictions-table">
+                                <thead>
+                                    <tr>
+                                        <th>Match</th>
+                                        <th>Kick-off (EAT)</th>
+                                        <th>Prediction</th>
+                                        <th>Odds</th>
+                                        <th>Confidence</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="mozzartedge-tbody">
+                                    <!-- Data will be populated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <h3>Data Scraping</h3>
-                    <p>We meticulously track thousands of virtual matches across both leagues.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Algorithm Analysis</h3>
-                    <p>Our proprietary model analyzes team patterns, odds history, and goal probabilities.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-crystal-ball"></i>
-                    </div>
-                    <h3>Smart Predictions</h3>
-                    <p>We deliver the most probable winning outcomes straight to your phone every evening.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Predictions Section -->
-    <section class="predictions" id="predictions">
-        <div class="container">
-            <h2 class="section-title">Today's Predictions - <span id="current-date"></span></h2>
-            
-            <!-- Tabs -->
-            <div class="tabs">
-                <button class="tab-btn active" data-tab="mozzartedge">
-                    <i class="fas fa-trophy"></i>
-                    Mozzartedge
-                </button>
-                <button class="tab-btn" data-tab="betika">
-                    <i class="fas fa-bolt"></i>
-                    Betika
-                </button>
-                <button class="tab-btn" data-tab="odibet">
-                    <i class="fas fa-star"></i>
-                    Odibet
-                </button>
-            </div>
-
-            <!-- Tables -->
-            <div class="table-container">
-                <div class="tab-content active" id="mozzartedge-content">
-                    <div class="table-wrapper">
-                        <table class="predictions-table">
-                            <thead>
-                                <tr>
-                                    <th>Match</th>
-                                    <th>Kick-off (EAT)</th>
-                                    <th>Prediction</th>
-                                    <th>Odds</th>
-                                    <th>Confidence</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody id="mozzartedge-tbody">
-                                <!-- Data will be populated by JavaScript -->
-                            </tbody>
-                        </table>
+                    <div class="tab-content" id="betika-content">
+                        <div class="table-wrapper">
+                            <table class="predictions-table">
+                                <thead>
+                                    <tr>
+                                        <th>Match</th>
+                                        <th>Kick-off (EAT)</th>
+                                        <th>Prediction</th>
+                                        <th>Odds</th>
+                                        <th>Confidence</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="betika-tbody">
+                                    <!-- Data will be populated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
 
-                <div class="tab-content" id="betika-content">
-                    <div class="table-wrapper">
-                        <table class="predictions-table">
-                            <thead>
-                                <tr>
-                                    <th>Match</th>
-                                    <th>Kick-off (EAT)</th>
-                                    <th>Prediction</th>
-                                    <th>Odds</th>
-                                    <th>Confidence</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody id="betika-tbody">
-                                <!-- Data will be populated by JavaScript -->
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="tab-content" id="odibet-content">
-                    <div class="table-wrapper">
-                        <table class="predictions-table">
-                            <thead>
-                                <tr>
-                                    <th>Match</th>
-                                    <th>Kick-off (EAT)</th>
-                                    <th>Prediction</th>
-                                    <th>Odds</th>
-                                    <th>Confidence</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody id="odibet-tbody">
-                                <!-- Data will be populated by JavaScript -->
-                            </tbody>
-                        </table>
+                    <div class="tab-content" id="odibet-content">
+                        <div class="table-wrapper">
+                            <table class="predictions-table">
+                                <thead>
+                                    <tr>
+                                        <th>Match</th>
+                                        <th>Kick-off (EAT)</th>
+                                        <th>Prediction</th>
+                                        <th>Odds</th>
+                                        <th>Confidence</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="odibet-tbody">
+                                    <!-- Data will be populated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Premium Section -->
-    <section class="premium" id="premium">
-        <div class="container">
-            <h2 class="section-title">Unlock The Full Potential. Go Premium.</h2>
-            
-            <div class="premium-content">
-                <div class="premium-features">
-                    <h3>Premium Features</h3>
-                    <ul class="features-list">
-                        <li>
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>All Predictions for ALL Gameweeks (Not just peak times)</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <span>Early Access to Predictions</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-chart-bar"></i>
-                            <span>In-depth Analysis & Win Probability Metrics</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-bell"></i>
-                            <span>Custom Betting Combination Alerts</span>
-                        </li>
-                        <li>
-                            <i class="fab fa-whatsapp"></i>
-                            <span>WhatsApp Notification Delivery</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="pricing-cards">
-                    <div class="pricing-card">
-                        <h3>Weekly Plan</h3>
-                        <div class="price">KSh 199</div>
-                        <p>Perfect for trying out our premium features</p>
-                        <button class="btn btn-primary">
-                            <i class="fab fa-whatsapp"></i>
-                            Subscribe Now
-                        </button>
+        <!-- Premium Section -->
+        <section class="premium" id="premium">
+            <div class="container">
+                <h2 class="section-title">Unlock The Full Potential. Go Premium.</h2>
+                
+                <div class="premium-content">
+                    <div class="premium-features">
+                        <h3>Premium Features</h3>
+                        <ul class="features-list">
+                            <li>
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>All Predictions for ALL Gameweeks (Not just peak times)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Early Access to Predictions</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-chart-bar"></i>
+                                <span>In-depth Analysis & Win Probability Metrics</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-bell"></i>
+                                <span>Custom Betting Combination Alerts</span>
+                            </li>
+                            <li>
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp Notification Delivery</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="pricing-card featured">
-                        <div class="popular-badge">Most Popular</div>
-                        <h3>Monthly Plan</h3>
-                        <div class="price">KSh 599</div>
-                        <p>Best value for serious players</p>
-                        <button class="btn btn-primary">
-                            <i class="fab fa-whatsapp"></i>
-                            Subscribe Now
-                        </button>
+
+                    <div class="pricing-cards">
+                        <div class="pricing-card">
+                            <h3>Weekly Plan</h3>
+                            <div class="price">KSh 199</div>
+                            <p>Perfect for trying out our premium features</p>
+                            <button class="btn btn-primary">
+                                <i class="fab fa-whatsapp"></i>
+                                Subscribe Now
+                            </button>
+                        </div>
+                        <div class="pricing-card featured">
+                            <div class="popular-badge">Most Popular</div>
+                            <h3>Monthly Plan</h3>
+                            <div class="price">KSh 599</div>
+                            <p>Best value for serious players</p>
+                            <button class="btn btn-primary">
+                                <i class="fab fa-whatsapp"></i>
+                                Subscribe Now
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Mobile Navigation -->
     <nav class="mobile-nav">
@@ -295,7 +297,7 @@
                 
                 <div class="footer-section">
                     <h4>Contact</h4>
-                    <p><i class="fab fa-whatsapp"></i> WhatsApp: +254 700 000 000</p>
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp: +81 708 511 4301</p>
                     <p><i class="fas fa-envelope"></i> Email: info@mozzartedgepro.com</p>
                 </div>
 
@@ -318,7 +320,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 Mozzartedge Pro. All rights reserved.</p>
+                <p>&copy; 2025 Mozzartedge Pro. All rights reserved.</p>
             </div>
         </div>
     </footer>
