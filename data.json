@@ -1,0 +1,200 @@
+{
+  "mozzartedge": [
+    {
+      "match": "FC Torino vs London City",
+      "kickoff": "7:15 PM",
+      "prediction": "Over 2.5",
+      "odds": 2.15,
+      "confidence": 85,
+      "status": "upcoming"
+    },
+    {
+      "match": "Paris United vs Berlin FC",
+      "kickoff": "7:20 PM",
+      "prediction": "GG",
+      "odds": 1.85,
+      "confidence": 78,
+      "status": "upcoming"
+    },
+    {
+      "match": "Madrid Stars vs Rome Warriors",
+      "kickoff": "7:25 PM",
+      "prediction": "1 & Over",
+      "odds": 2.45,
+      "confidence": 72,
+      "status": "upcoming"
+    },
+    {
+      "match": "Amsterdam Lions vs Barcelona Kings",
+      "kickoff": "7:30 PM",
+      "prediction": "Over 1.5",
+      "odds": 1.65,
+      "confidence": 91,
+      "status": "upcoming"
+    },
+    {
+      "match": "Milan Giants vs Munich Eagles",
+      "kickoff": "7:35 PM",
+      "prediction": "2 & Over",
+      "odds": 2.75,
+      "confidence": 68,
+      "status": "upcoming"
+    },
+    {
+      "match": "Liverpool Legends vs Manchester United",
+      "kickoff": "7:40 PM",
+      "prediction": "Over 2.5",
+      "odds": 2.10,
+      "confidence": 82,
+      "status": "upcoming"
+    },
+    {
+      "match": "Arsenal Warriors vs Chelsea Kings",
+      "kickoff": "7:45 PM",
+      "prediction": "GG",
+      "odds": 1.95,
+      "confidence": 76,
+      "status": "upcoming"
+    },
+    {
+      "match": "Tottenham Stars vs Everton Lions",
+      "kickoff": "7:50 PM",
+      "prediction": "1 & Over",
+      "odds": 2.30,
+      "confidence": 79,
+      "status": "upcoming"
+    }
+  ],
+  "betika": [
+    {
+      "match": "Liverpool Legends vs Manchester United",
+      "kickoff": "8:00 PM",
+      "prediction": "Over 2.5",
+      "odds": 2.10,
+      "confidence": 82,
+      "status": "upcoming"
+    },
+    {
+      "match": "Arsenal Warriors vs Chelsea Kings",
+      "kickoff": "8:05 PM",
+      "prediction": "GG",
+      "odds": 1.95,
+      "confidence": 76,
+      "status": "upcoming"
+    },
+    {
+      "match": "Tottenham Stars vs Everton Lions",
+      "kickoff": "8:10 PM",
+      "prediction": "1 & Over",
+      "odds": 2.30,
+      "confidence": 79,
+      "status": "upcoming"
+    },
+    {
+      "match": "Leicester City vs Aston Villa",
+      "kickoff": "8:15 PM",
+      "prediction": "Over 1.5",
+      "odds": 1.75,
+      "confidence": 88,
+      "status": "upcoming"
+    },
+    {
+      "match": "West Ham vs Crystal Palace",
+      "kickoff": "8:20 PM",
+      "prediction": "2 & Over",
+      "odds": 2.60,
+      "confidence": 71,
+      "status": "upcoming"
+    },
+    {
+      "match": "Newcastle United vs Brighton",
+      "kickoff": "8:25 PM",
+      "prediction": "Over 2.5",
+      "odds": 2.20,
+      "confidence": 84,
+      "status": "upcoming"
+    },
+    {
+      "match": "Wolves vs Burnley",
+      "kickoff": "8:30 PM",
+      "prediction": "GG",
+      "odds": 1.90,
+      "confidence": 77,
+      "status": "upcoming"
+    },
+    {
+      "match": "Fulham vs Sheffield United",
+      "kickoff": "8:35 PM",
+      "prediction": "1 & Over",
+      "odds": 2.40,
+      "confidence": 73,
+      "status": "upcoming"
+    }
+  ],
+  "odibet": [
+    {
+      "match": "Real Madrid vs Barcelona",
+      "kickoff": "8:40 PM",
+      "prediction": "Over 2.5",
+      "odds": 2.25,
+      "confidence": 87,
+      "status": "upcoming"
+    },
+    {
+      "match": "Bayern Munich vs Borussia Dortmund",
+      "kickoff": "8:45 PM",
+      "prediction": "GG",
+      "odds": 1.80,
+      "confidence": 81,
+      "status": "upcoming"
+    },
+    {
+      "match": "PSG vs Marseille",
+      "kickoff": "8:50 PM",
+      "prediction": "1 & Over",
+      "odds": 2.35,
+      "confidence": 74,
+      "status": "upcoming"
+    },
+    {
+      "match": "Juventus vs Inter Milan",
+      "kickoff": "8:55 PM",
+      "prediction": "Over 1.5",
+      "odds": 1.70,
+      "confidence": 89,
+      "status": "upcoming"
+    },
+    {
+      "match": "Ajax vs PSV Eindhoven",
+      "kickoff": "9:00 PM",
+      "prediction": "2 & Over",
+      "odds": 2.80,
+      "confidence": 69,
+      "status": "upcoming"
+    },
+    {
+      "match": "Porto vs Benfica",
+      "kickoff": "9:05 PM",
+      "prediction": "Over 2.5",
+      "odds": 2.15,
+      "confidence": 83,
+      "status": "upcoming"
+    },
+    {
+      "match": "Galatasaray vs Fenerbahce",
+      "kickoff": "9:10 PM",
+      "prediction": "GG",
+      "odds": 1.88,
+      "confidence": 75,
+      "status": "upcoming"
+    },
+    {
+      "match": "Shakhtar vs Dynamo Kyiv",
+      "kickoff": "9:15 PM",
+      "prediction": "1 & Over",
+      "odds": 2.50,
+      "confidence": 70,
+      "status": "upcoming"
+    }
+  ]
+}

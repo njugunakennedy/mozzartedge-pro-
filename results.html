@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Results & Testimonials - Mozzartedge Pro</title>
+    <meta name="description" content="View our previous day's successful predictions and read testimonials from satisfied customers.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="Video/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="Video/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Video/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Video/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="Video/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="Video/android-chrome-512x512.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-trophy"></i>
+                <span>Mozzartedge Pro</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#predictions" class="nav-link">Predictions</a>
+                <a href="results.html" class="nav-link active">Results</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="index.html#premium" class="nav-link">Premium</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Results Hero Section -->
+    <section class="results-hero">
+        <div class="container">
+            <div class="results-hero-content">
+                <h1 class="results-hero-title">Yesterday's Winning Results</h1>
+                <p class="results-hero-subtitle">See how our predictions performed and join thousands of satisfied customers</p>
+                <div class="results-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">87%</div>
+                        <div class="stat-label">Win Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">156</div>
+                        <div class="stat-label">Winning Bets</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">KSh 45,200</div>
+                        <div class="stat-label">Total Winnings</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Previous Day Results Section -->
+    <section class="previous-results" id="previous-results">
+        <div class="container">
+            <h2 class="section-title">Yesterday's Results - <span id="yesterday-date"></span></h2>
+            
+            <!-- Results Tabs -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="mozzartedge-results">
+                    <i class="fas fa-trophy"></i>
+                    Mozzartedge Results
+                </button>
+                <button class="tab-btn" data-tab="betika-results">
+                    <i class="fas fa-bolt"></i>
+                    Betika Results
+                </button>
+                <button class="tab-btn" data-tab="odibet-results">
+                    <i class="fas fa-star"></i>
+                    Odibet Results
+                </button>
+            </div>
+
+            <!-- Results Tables -->
+            <div class="table-container">
+                <div class="tab-content active" id="mozzartedge-results-content">
+                    <div class="table-wrapper">
+                        <table class="results-table">
+                            <thead>
+                                <tr>
+                                    <th>Match</th>
+                                    <th>Prediction</th>
+                                    <th>Odds</th>
+                                    <th>Result</th>
+                                    <th>Status</th>
+                                    <th>Profit</th>
+                                </tr>
+                            </thead>
+                            <tbody id="mozzartedge-results-tbody">
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="betika-results-content">
+                    <div class="table-wrapper">
+                        <table class="results-table">
+                            <thead>
+                                <tr>
+                                    <th>Match</th>
+                                    <th>Prediction</th>
+                                    <th>Odds</th>
+                                    <th>Result</th>
+                                    <th>Status</th>
+                                    <th>Profit</th>
+                                </tr>
+                            </thead>
+                            <tbody id="betika-results-tbody">
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="odibet-results-content">
+                    <div class="table-wrapper">
+                        <table class="results-table">
+                            <thead>
+                                <tr>
+                                    <th>Match</th>
+                                    <th>Prediction</th>
+                                    <th>Odds</th>
+                                    <th>Result</th>
+                                    <th>Status</th>
+                                    <th>Profit</th>
+                                </tr>
+                            </thead>
+                            <tbody id="odibet-results-tbody">
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Summary -->
+            <div class="results-summary">
+                <div class="summary-card">
+                    <h3>Overall Performance</h3>
+                    <div class="summary-stats">
+                        <div class="summary-stat">
+                            <span class="stat-label">Total Bets</span>
+                            <span class="stat-value">24</span>
+                        </div>
+                        <div class="summary-stat">
+                            <span class="stat-label">Wins</span>
+                            <span class="stat-value success">21</span>
+                        </div>
+                        <div class="summary-stat">
+                            <span class="stat-label">Losses</span>
+                            <span class="stat-value error">3</span>
+                        </div>
+                        <div class="summary-stat">
+                            <span class="stat-label">Win Rate</span>
+                            <span class="stat-value success">87.5%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>John Mwangi</h4>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"I've been using Mozzartedge Pro for 3 months now and my winnings have increased by 300%. The predictions are incredibly accurate and the premium features are worth every shilling!"</p>
+                    <div class="testimonial-stats">
+                        <span class="stat-badge">+KSh 25,000</span>
+                        <span class="stat-badge">89% Win Rate</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Sarah Kamau</h4>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"The WhatsApp notifications are a game-changer! I never miss a prediction and the early access to premium features has given me a huge advantage over other players."</p>
+                    <div class="testimonial-stats">
+                        <span class="stat-badge">+KSh 18,500</span>
+                        <span class="stat-badge">92% Win Rate</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>David Ochieng</h4>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Started with the weekly plan and upgraded to monthly after seeing the results. The in-depth analysis and win probability metrics help me make informed decisions. Highly recommended!"</p>
+                    <div class="testimonial-stats">
+                        <span class="stat-badge">+KSh 32,000</span>
+                        <span class="stat-badge">85% Win Rate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="results-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Winning?</h2>
+                <p>Join thousands of successful players and start your winning streak today</p>
+                <div class="cta-buttons">
+                    <a href="index.html#predictions" class="btn btn-primary">
+                        <i class="fas fa-chart-line"></i>
+                        View Today's Predictions
+                    </a>
+                    <a href="index.html#premium" class="btn btn-secondary">
+                        <i class="fas fa-crown"></i>
+                        Go Premium
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mozzartedge Pro</h3>
+                    <p>Data-driven predictions for Virtual Leagues</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp: +254 700 000 000</p>
+                    <p><i class="fas fa-envelope"></i> Email: info@mozzartedgepro.com</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <p>Registered SVG Business #B2024/789</p>
+                    <p>License: Virtual Gaming Authority</p>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer">
+                <div class="disclaimer-box">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Gamble Responsibly</h4>
+                    <p>This service is for entertainment purposes only. Please gamble responsibly and only bet what you can afford to lose. If you or someone you know has a gambling problem, please seek help from professional organizations.</p>
+                    <div class="disclaimer-links">
+                        <a href="#">Responsible Gambling Resources</a>
+                        <a href="#">Gambling Addiction Help</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mozzartedge Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="results.js"></script>
+</body>
+</html>
