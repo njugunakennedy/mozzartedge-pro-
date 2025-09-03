@@ -691,6 +691,59 @@ body {
     color: var(--text-muted);
 }
 
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    padding: 0.5rem 0;
+}
+
+.mobile-nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.mobile-nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    min-width: 60px;
+}
+
+.mobile-nav-link:hover {
+    color: var(--primary-color);
+    background: rgba(0, 100, 0, 0.1);
+}
+
+.mobile-nav-link i {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.mobile-nav-link span {
+    font-size: 0.7rem;
+    text-align: center;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-container {
@@ -727,6 +780,15 @@ body {
     
     .nav-menu {
         display: none;
+    }
+    
+    .mobile-nav {
+        display: block;
+    }
+    
+    /* Add bottom padding to body to account for mobile nav */
+    body {
+        padding-bottom: 80px;
     }
     
     .tabs {
