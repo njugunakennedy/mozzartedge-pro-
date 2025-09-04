@@ -640,6 +640,63 @@ body {
     background: var(--primary-light);
 }
 
+.accepted-payments {
+    margin-top: 1.5rem;
+}
+
+.accepted-payments h4 {
+    font-family: var(--font-heading);
+    color: var(--text-white);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    color: var(--text-light);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.payment-method:hover {
+    background: rgba(0, 100, 0, 0.2);
+    border-color: var(--primary-color);
+    color: var(--text-white);
+}
+
+.payment-method i {
+    font-size: 1rem;
+}
+
+.payment-method .fab.fa-paypal {
+    color: #0070ba;
+}
+
+.payment-method .fab.fa-bitcoin {
+    color: #f7931a;
+}
+
+.payment-method .fas.fa-mobile-alt {
+    color: #00a651;
+}
+
+.payment-method .fas.fa-credit-card {
+    color: #ff6b35;
+}
+
 .footer-disclaimer {
     margin-bottom: 2rem;
 }

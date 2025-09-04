@@ -1,7 +1,7 @@
 {
   "mozzartedge": [
     {
-      "match": "FC Torino vs London City",
+      "match": "Chelsea vs Wolves",
       "kickoff": "7:15 PM",
       "prediction": "Over 2.5",
       "odds": 2.15,
@@ -9,7 +9,7 @@
       "status": "upcoming"
     },
     {
-      "match": "Paris United vs Berlin FC",
+      "match": "Roma vs Juventus",
       "kickoff": "7:20 PM",
       "prediction": "GG",
       "odds": 1.85,
@@ -17,7 +17,7 @@
       "status": "upcoming"
     },
     {
-      "match": "Madrid Stars vs Rome Warriors",
+      "match": "Real Madrid vs Elche",
       "kickoff": "7:25 PM",
       "prediction": "1 & Over",
       "odds": 2.45,
@@ -25,7 +25,7 @@
       "status": "upcoming"
     },
     {
-      "match": "Amsterdam Lions vs Barcelona Kings",
+      "match": "Wolfsburg vs Dortmund",
       "kickoff": "7:30 PM",
       "prediction": "Over 1.5",
       "odds": 1.65,
@@ -43,7 +43,7 @@
   ],
   "betika": [
     {
-      "match": "Liverpool Legends vs Manchester United",
+      "match": "Liverpool vs Manchester United",
       "kickoff": "8:00 PM",
       "prediction": "Over 2.5",
       "odds": 2.10,
@@ -51,7 +51,7 @@
       "status": "upcoming"
     },
     {
-      "match": "Arsenal Warriors vs Chelsea Kings",
+      "match": "Arsenal vs Chelsea",
       "kickoff": "8:05 PM",
       "prediction": "GG",
       "odds": 1.95,
@@ -59,7 +59,7 @@
       "status": "upcoming"
     },
     {
-      "match": "Tottenham Stars vs Everton Lions",
+      "match": "Tottenham vs Everton",
       "kickoff": "8:10 PM",
       "prediction": "1 & Over",
       "odds": 2.30,
@@ -67,7 +67,7 @@
       "status": "upcoming"
     },
     {
-      "match": "Leicester City vs Aston Villa",
+      "match": "Sunderland vs Aston Villa",
       "kickoff": "8:15 PM",
       "prediction": "Over 1.5",
       "odds": 1.75,
@@ -128,7 +128,7 @@
   "results": [
     {
       "date": "2024-01-15",
-      "match": "FC Torino vs London City",
+      "match": "Chelsea vs Wolves",
       "prediction": "Over 2.5",
       "result": "3-2",
       "status": "won",
@@ -136,7 +136,7 @@
     },
     {
       "date": "2024-01-15",
-      "match": "Paris United vs Berlin FC",
+      "match": "Roma vs Juventus",
       "prediction": "GG",
       "result": "2-1",
       "status": "won",
@@ -144,7 +144,7 @@
     },
     {
       "date": "2024-01-15",
-      "match": "Madrid Stars vs Rome Warriors",
+      "match": "Real Madrid vs Elche",
       "prediction": "1 & Over",
       "result": "0-1",
       "status": "lost",
@@ -152,7 +152,7 @@
     },
     {
       "date": "2024-01-15",
-      "match": "Amsterdam Lions vs Barcelona Kings",
+      "match": "Wolfsburg vs Dortmund",
       "prediction": "Over 1.5",
       "result": "2-1",
       "status": "won",
@@ -168,7 +168,7 @@
     },
     {
       "date": "2024-01-14",
-      "match": "Liverpool Legends vs Manchester United",
+      "match": "Liverpool vs Manchester United",
       "prediction": "Over 2.5",
       "result": "2-2",
       "status": "won",
@@ -176,7 +176,7 @@
     },
     {
       "date": "2024-01-14",
-      "match": "Arsenal Warriors vs Chelsea Kings",
+      "match": "Arsenal vs Chelsea",
       "prediction": "GG",
       "result": "1-1",
       "status": "won",
@@ -184,7 +184,7 @@
     },
     {
       "date": "2024-01-14",
-      "match": "Tottenham Stars vs Everton Lions",
+      "match": "Tottenham vs Everton",
       "prediction": "1 & Over",
       "result": "3-0",
       "status": "won",
