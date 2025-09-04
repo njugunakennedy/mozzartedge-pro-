@@ -387,6 +387,7 @@ class MozzartedgeApp {
     constructor() {
         this.currentTab = 'mozzartedge';
         this.predictionsData = null;
+        this.realSoccerData = null;
         this.init();
     }
 
@@ -434,11 +435,162 @@ class MozzartedgeApp {
             if (!this.predictionsData) {
                 throw new Error('Failed to load shuffled data');
             }
+            
+            // Load real soccer predictions
+            await this.loadRealSoccerPredictions();
         } catch (error) {
             console.error('Error loading predictions data:', error);
             // Fallback data if JSON file is not available
             this.predictionsData = this.getFallbackData();
         }
+    }
+
+    async loadRealSoccerPredictions() {
+        try {
+            const response = await fetch('realdata.json');
+            if (!response.ok) {
+                throw new Error('Failed to load real soccer data');
+            }
+            
+            const realData = await response.json();
+            this.realSoccerData = realData.realMatches;
+            this.renderRealSoccerPredictions();
+        } catch (error) {
+            console.error('Error loading real soccer predictions:', error);
+            this.realSoccerData = this.getFallbackRealData();
+            this.renderRealSoccerPredictions();
+        }
+    }
+
+    renderRealSoccerPredictions() {
+        const tbody = document.getElementById('real-predictions-tbody');
+        if (!tbody || !this.realSoccerData) return;
+
+        // Get today's date in YYYY-MM-DD format
+        const today = new Date();
+        const todayString = today.toISOString().split('T')[0];
+        
+        // Update the real current date display
+        const realDateElement = document.getElementById('real-current-date');
+        if (realDateElement) {
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            const dateString = today.toLocaleDateString('en-US', options);
+            realDateElement.textContent = dateString;
+        }
+
+        // Get today's matches or fallback to first available date
+        let todaysMatches = this.realSoccerData[todayString];
+        if (!todaysMatches) {
+            // Fallback to first available date
+            const availableDates = Object.keys(this.realSoccerData);
+            if (availableDates.length > 0) {
+                todaysMatches = this.realSoccerData[availableDates[0]];
+            }
+        }
+
+        if (!todaysMatches) {
+            tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; color: var(--text-muted);">No matches scheduled for today</td></tr>';
+            return;
+        }
+
+        tbody.innerHTML = '';
+
+        todaysMatches.forEach(match => {
+            const row = this.createRealPredictionRow(match);
+            tbody.appendChild(row);
+        });
+    }
+
+    createRealPredictionRow(match) {
+        const row = document.createElement('tr');
+        
+        const confidenceClass = this.getRealConfidenceClass(match.confidence);
+        const statusClass = this.getRealStatusClass(match.status);
+        const statusText = this.getRealStatusText(match.status);
+
+        row.innerHTML = `
+            <td class="league-cell">${match.league}</td>
+            <td class="match-cell">${match.match}</td>
+            <td class="venue-cell">${match.venue}</td>
+            <td>${match.kickoff}</td>
+            <td>${match.prediction}</td>
+            <td class="real-odds-cell">${match.odds}</td>
+            <td>
+                <div class="real-confidence-bar">
+                    <div class="real-confidence-fill ${confidenceClass}" style="width: ${match.confidence}%"></div>
+                </div>
+                <small>${match.confidence}%</small>
+            </td>
+            <td class="${statusClass}">${statusText}</td>
+        `;
+
+        return row;
+    }
+
+    getRealConfidenceClass(confidence) {
+        if (confidence >= 80) return 'real-confidence-high';
+        if (confidence >= 60) return 'real-confidence-medium';
+        return 'real-confidence-low';
+    }
+
+    getRealStatusClass(status) {
+        switch (status) {
+            case 'win': return 'real-status-win';
+            case 'loss': return 'real-status-loss';
+            case 'upcoming': return 'real-status-upcoming';
+            default: return 'real-status-upcoming';
+        }
+    }
+
+    getRealStatusText(status) {
+        switch (status) {
+            case 'win': return 'Won';
+            case 'loss': return 'Lost';
+            case 'upcoming': return 'Upcoming';
+            default: return 'Upcoming';
+        }
+    }
+
+    getFallbackRealData() {
+        return {
+            "2025-09-04": [
+                {
+                    "match": "Manchester City vs Arsenal",
+                    "kickoff": "8:00 PM",
+                    "prediction": "Over 2.5",
+                    "odds": 2.15,
+                    "confidence": 85,
+                    "status": "upcoming",
+                    "league": "Premier League",
+                    "venue": "Etihad Stadium"
+                },
+                {
+                    "match": "Real Madrid vs Barcelona",
+                    "kickoff": "9:30 PM",
+                    "prediction": "GG",
+                    "odds": 1.85,
+                    "confidence": 78,
+                    "status": "upcoming",
+                    "league": "La Liga",
+                    "venue": "Santiago Bernabéu"
+                },
+                {
+                    "match": "Bayern Munich vs Borussia Dortmund",
+                    "kickoff": "7:45 PM",
+                    "prediction": "1 & Over",
+                    "odds": 2.45,
+                    "confidence": 72,
+                    "status": "upcoming",
+                    "league": "Bundesliga",
+                    "venue": "Allianz Arena"
+                }
+            ]
+        };
     }
 
     getFallbackData() {

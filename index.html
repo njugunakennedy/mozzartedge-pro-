@@ -95,7 +95,7 @@
                             <i class="fas fa-spider"></i>
                         </div>
                         <h3>Data Scraping</h3>
-                        <p>We meticulously track thousands of virtual matches across all leagues.</p>
+                        <p>We meticulously track thousands of virtual and real matches across all leagues.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon">
@@ -115,10 +115,10 @@
             </div>
         </section>
 
-        <!-- Predictions Section -->
+        <!-- Virtual Predictions Section -->
         <section class="predictions" id="predictions">
             <div class="container">
-                <h2 class="section-title">Today's Predictions - <span id="current-date"></span></h2>
+                <h2 class="section-title">Today's Virtual Predictions - <span id="current-date"></span></h2>
                 
                 <!-- Tabs -->
                 <div class="tabs">
@@ -196,6 +196,36 @@
                                 </tbody>
                             </table>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real Soccer Predictions Section -->
+        <section class="real-predictions" id="real-predictions">
+            <div class="container">
+                <h2 class="section-title">Today's Real Soccer Predictions - <span id="real-current-date"></span></h2>
+                <p class="section-subtitle">Expert analysis of real football matches from top European leagues</p>
+                
+                <div class="real-predictions-container">
+                    <div class="real-predictions-table-wrapper">
+                        <table class="real-predictions-table">
+                            <thead>
+                                <tr>
+                                    <th>League</th>
+                                    <th>Match</th>
+                                    <th>Venue</th>
+                                    <th>Kick-off (EAT)</th>
+                                    <th>Prediction</th>
+                                    <th>Odds</th>
+                                    <th>Confidence</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="real-predictions-tbody">
+                                <!-- Real soccer data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

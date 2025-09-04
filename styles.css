@@ -491,6 +491,118 @@ body {
     font-weight: 600;
 }
 
+/* Real Soccer Predictions Section */
+.real-predictions {
+    padding: var(--section-padding);
+    background: var(--background-light);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    font-family: var(--font-accent);
+}
+
+.real-predictions-container {
+    background: var(--background-lighter);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.real-predictions-table-wrapper {
+    overflow-x: auto;
+}
+
+.real-predictions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.real-predictions-table th {
+    background: var(--primary-light);
+    color: var(--text-white);
+    padding: 1.5rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.real-predictions-table td {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    white-space: nowrap;
+}
+
+.real-predictions-table tr:hover {
+    background: rgba(34, 139, 34, 0.1);
+}
+
+.league-cell {
+    font-weight: 600;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+.venue-cell {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.real-odds-cell {
+    font-weight: 700;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+.real-confidence-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.real-confidence-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.real-confidence-high {
+    background: var(--success-color);
+}
+
+.real-confidence-medium {
+    background: var(--warning-color);
+}
+
+.real-confidence-low {
+    background: var(--error-color);
+}
+
+.real-status-win {
+    color: var(--success-color);
+    font-weight: 600;
+}
+
+.real-status-loss {
+    color: var(--error-color);
+    font-weight: 600;
+}
+
+.real-status-upcoming {
+    color: var(--warning-color);
+    font-weight: 600;
+}
+
 /* Premium Section */
 .premium {
     padding: var(--section-padding);
@@ -866,6 +978,20 @@ body {
     .predictions-table th,
     .predictions-table td {
         padding: 1rem 0.5rem;
+    }
+    
+    .real-predictions-table {
+        font-size: 0.8rem;
+    }
+    
+    .real-predictions-table th,
+    .real-predictions-table td {
+        padding: 0.75rem 0.25rem;
+    }
+    
+    .real-predictions-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 }
 
