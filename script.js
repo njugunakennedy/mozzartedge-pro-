@@ -764,7 +764,7 @@ class MozzartedgeApp {
     }
 
     openWhatsAppWithMessage(message) {
-        const phoneNumber = '+254700000000';
+        const phoneNumber = '+817085114301';
         const encodedMessage = encodeURIComponent(message);
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
         window.open(whatsappUrl, '_blank');
