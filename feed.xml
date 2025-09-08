@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Mozzartedge Pro Blog</title>
+    <link>https://mozzartedgepro.com/blog</link>
+    <description>Insights, strategies and analysis for virtual leagues.</description>
+    <language>en</language>
+    <lastBuildDate>Mon, 08 Sep 2025 00:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>Mastering Virtual League Patterns: A Complete Guide</title>
+      <link>https://mozzartedgepro.com/blog/virtual-league-patterns.html</link>
+      <guid>https://mozzartedgepro.com/blog/virtual-league-patterns.html</guid>
+      <pubDate>Mon, 15 Dec 2024 00:00:00 GMT</pubDate>
+      <description>Discover hidden patterns in virtual leagues and how to use them effectively.</description>
+    </item>
+
+    <item>
+      <title>The Psychology of Successful Virtual Betting</title>
+      <link>https://mozzartedgepro.com/blog/betting-psychology.html</link>
+      <guid>https://mozzartedgepro.com/blog/betting-psychology.html</guid>
+      <pubDate>Thu, 12 Dec 2024 00:00:00 GMT</pubDate>
+      <description>Mindset, discipline, and routines used by consistent winners.</description>
+    </item>
+
+    <item>
+      <title>How Our Algorithm Predicts Virtual Match Outcomes</title>
+      <link>https://mozzartedgepro.com/blog/algorithm-predicts-outcomes.html</link>
+      <guid>https://mozzartedgepro.com/blog/algorithm-predicts-outcomes.html</guid>
+      <pubDate>Tue, 10 Dec 2024 00:00:00 GMT</pubDate>
+      <description>Inside our model: data sources, features, and validation.</description>
+    </item>
+  </channel>
+</rss>
+
