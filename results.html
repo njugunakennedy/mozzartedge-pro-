@@ -64,7 +64,9 @@
                 <a href="/" class="nav-link">Home</a>
                 <a href="index.html" class="nav-link">Predictions</a>
                 <a href="/results" class="nav-link active">Results</a>
-                <a href="/blog" class="nav-link active">Blog</a>
+                <a href="/blog" class="nav-link">Blog</a>
+                <a href="/solutions" class="nav-link">Solutions</a>
+                <a href="https://wa.me/+817085114301?text=Hi%20Mozzartedge%20Pro%2C%20I%27d%20like%20to%20book%20a%20demo." target="_blank" class="nav-link" style="color: var(--accent-color); font-weight: 700;">Book a Demo</a>
             </div>
         </div>
     </nav>
@@ -83,6 +85,10 @@
             <a href="/blog" class="mobile-nav-link">
                 <i class="fas fa-blog"></i>
                 <span>Blog</span>
+            </a>
+            <a href="/solutions" class="mobile-nav-link">
+                <i class="fas fa-puzzle-piece"></i>
+                <span>Solutions</span>
             </a>
             <a href="/#premium" class="mobile-nav-link">
                 <i class="fas fa-crown"></i>
@@ -227,6 +233,50 @@
         </div>
     </section>
 
+    <!-- FAQs Section -->
+    <section class="faqs" id="faqs">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span><i class="fas fa-question-circle"></i> How accurate are your predictions?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our virtual leagues predictions historically average 80–90% during peak times. Accuracy varies by league and odds. Past performance does not guarantee future results.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span><i class="fas fa-question-circle"></i> What do I get with Premium?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You get access to all gameweeks, early picks, WhatsApp alerts, account management, and advanced metrics like confidence bars and odds movements.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span><i class="fas fa-question-circle"></i> Can I see yesterday's tickets?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. This page shows yesterday’s performance by bookmaker. We also share verified wins in the betslip gallery below.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span><i class="fas fa-question-circle"></i> How do I contact support?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Reach us on WhatsApp at +81 708 511 4301 or email info@mozzartedgepro.com. We usually respond within minutes during active hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="container">
@@ -443,6 +493,17 @@
     <!-- JavaScript -->
     <script src="dataShuffler.js"></script>
     <script src="results.js"></script>
+    <script>
+    // Simple accessible accordion for FAQs
+    document.querySelectorAll('.faq-question').forEach(function(btn){
+        btn.addEventListener('click', function(){
+            var expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!expanded));
+            var answer = this.nextElementSibling;
+            if (answer) answer.classList.toggle('open');
+        });
+    });
+    </script>
     
     <!-- Structured Data: Image Gallery of Betslips -->
     <script type="application/ld+json">

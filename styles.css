@@ -1055,6 +1055,78 @@ html {
     to { transform: rotate(360deg); }
 }
 
+/* Floating Chat Widget */
+.chat-widget {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1100;
+}
+
+.chat-toggle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary-color);
+    color: var(--text-white);
+    box-shadow: var(--shadow-lg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.chat-panel {
+    position: absolute;
+    right: 0;
+    bottom: 70px;
+    width: 320px;
+    background: var(--background-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    transform: translateY(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+}
+
+.chat-panel.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: var(--background-darker);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-header span {
+    font-weight: 600;
+}
+
+.chat-close {
+    background: transparent;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 1rem;
+    display: grid;
+    gap: 0.75rem;
+}
+
 /* Results Page Styles */
 .results-hero {
     background: linear-gradient(135deg, var(--background-dark) 0%, var(--background-darker) 100%);
@@ -1415,6 +1487,57 @@ html {
     font-size: 0.9rem;
     background: rgba(255, 255, 255, 0.03);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* FAQs */
+.faqs {
+    padding: var(--section-padding);
+    background: var(--background-light);
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+
+.faq-item {
+    background: var(--background-lighter);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 1rem 1.25rem;
+    background: transparent;
+    color: var(--text-white);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.faq-question i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease, padding 0.25s ease;
+    padding: 0 1.25rem;
+}
+
+.faq-answer.open {
+    padding: 0 1.25rem 1rem 1.25rem;
+    max-height: 300px;
 }
 
 @media (max-width: 1024px) {

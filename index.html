@@ -83,8 +83,10 @@
                 <a href="#predictions" class="nav-link">Predictions</a>
                 <a href="/results" class="nav-link">Results</a>
                 <a href="/blog" class="nav-link">Blog</a>
+                <a href="/solutions" class="nav-link">Solutions</a>
                 <a href="#premium" class="nav-link">Premium</a>
                 <a href="#contact" class="nav-link">Contact</a>
+                <a href="https://wa.me/+817085114301?text=Hi%20Mozzartedge%20Pro%2C%20I%27d%20like%20to%20book%20a%20demo." target="_blank" class="nav-link" style="color: var(--accent-color); font-weight: 700;">Book a Demo</a>
             </div>
         </div>
     </nav>
@@ -108,6 +110,10 @@
                             <i class="fas fa-crown"></i>
                             Go Premium
                         </button>
+                        <a class="btn btn-primary" href="https://wa.me/+817085114301?text=Hi%20Mozzartedge%20Pro%2C%20I%27d%20like%20to%20book%20a%20demo." target="_blank">
+                            <i class="fas fa-calendar-check"></i>
+                            Book a Demo
+                        </a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -411,8 +417,47 @@
         </div>
     </footer>
 
+    <!-- Floating Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-toggle" aria-label="Open chat">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+        <div class="chat-panel">
+            <div class="chat-header">
+                <span><i class="fas fa-headset"></i> Chat with us</span>
+                <button class="chat-close" aria-label="Close chat">&times;</button>
+            </div>
+            <div class="chat-body">
+                <p>Questions? We're here to help.</p>
+                <a class="btn btn-primary" href="https://wa.me/+817085114301?text=Hi%20Mozzartedge%20Pro%2C%20I%20need%20help%20with%20predictions." target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Chat
+                </a>
+                <a class="btn btn-secondary" href="mailto:info@mozzartedgepro.com?subject=Support%20Request">
+                    <i class="fas fa-envelope"></i> Email Us
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript -->
     <script src="dataShuffler.js"></script>
     <script src="script.js"></script>
+    <script>
+    (function() {
+        const toggle = document.querySelector('.chat-toggle');
+        const panel = document.querySelector('.chat-panel');
+        const closeBtn = document.querySelector('.chat-close');
+        if (!toggle || !panel) return;
+        const open = () => panel.classList.add('open');
+        const close = () => panel.classList.remove('open');
+        toggle.addEventListener('click', open);
+        closeBtn && closeBtn.addEventListener('click', close);
+        document.addEventListener('click', function(e) {
+            if (!panel.contains(e.target) && !toggle.contains(e.target)) {
+                close();
+            }
+        });
+    })();
+    </script>
 </body>
 </html>
