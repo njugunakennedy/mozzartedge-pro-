@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Predictions - All Matches</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <i class="fas fa-futbol"></i>
+                Football Predictions Pro
+            </h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="predictions.html" class="nav-link active">All Predictions</a>
+                <a href="#stats" class="nav-link">Statistics</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h2 class="section-title">All Football Predictions</h2>
+                <p class="page-subtitle">Comprehensive AI-powered predictions for today's matches</p>
+            </div>
+        </section>
+
+        <!-- Filters Section -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <label for="competitionFilter" class="filter-label">
+                            <i class="fas fa-filter"></i>
+                            Filter by Competition
+                        </label>
+                        <select id="competitionFilter" class="filter-select">
+                            <option value="all">All Competitions</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="predictionTypeFilter" class="filter-label">
+                            <i class="fas fa-brain"></i>
+                            Filter by Prediction Type
+                        </label>
+                        <select id="predictionTypeFilter" class="filter-select">
+                            <option value="all">All Prediction Types</option>
+                            <option value="double_chance">Double Chance (1X/X2)</option>
+                            <option value="goals_over_1_5">Over 1.5 Goals</option>
+                            <option value="goals_over_2_5">Over 2.5 Goals</option>
+                            <option value="both_teams_to_score">Both Teams to Score</option>
+                            <option value="team_goals">Team Goals</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="confidenceFilter" class="filter-label">
+                            <i class="fas fa-shield-alt"></i>
+                            Filter by Confidence
+                        </label>
+                        <select id="confidenceFilter" class="filter-select">
+                            <option value="all">All Confidence Levels</option>
+                            <option value="high">High Confidence (≥0.7)</option>
+                            <option value="medium">Medium Confidence (0.5-0.7)</option>
+                            <option value="low">Low Confidence (<0.5)</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="searchFilter" class="filter-label">
+                            <i class="fas fa-search"></i>
+                            Search Teams
+                        </label>
+                        <input type="text" id="searchFilter" class="filter-input" placeholder="Search by team name...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Summary -->
+        <section class="stats-summary">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-day"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-value" id="totalMatches">0</h3>
+                            <p class="stat-label">Total Matches</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-value" id="totalCompetitions">0</h3>
+                            <p class="stat-label">Competitions</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-value" id="avgConfidence">0%</h3>
+                            <p class="stat-label">Avg Confidence</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-value" id="matchesToday">0</h3>
+                            <p class="stat-label">Matches Today</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Betslips Section -->
+        <section class="betslips-section">
+            <div class="container">
+                <h2 class="section-title">Recommended Betslips</h2>
+                <p class="section-subtitle">AI-curated betting combinations for maximum value</p>
+                
+                <div class="betslips-grid" id="betslipsGrid">
+                    <!-- Betslips will be dynamically generated here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Matches Section -->
+        <section class="matches-section">
+            <div class="container">
+                <div class="matches-header">
+                    <h3 class="matches-title">Match Predictions</h3>
+                    <div class="matches-controls">
+                        <button id="sortByTime" class="control-btn active">
+                            <i class="fas fa-clock"></i>
+                            Sort by Time
+                        </button>
+                        <button id="sortByConfidence" class="control-btn">
+                            <i class="fas fa-shield-alt"></i>
+                            Sort by Confidence
+                        </button>
+                    </div>
+                </div>
+                <div class="matches-grid" id="matchesGrid">
+                    <!-- Match cards will be dynamically generated here -->
+                </div>
+                <div class="loading" id="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading predictions...</p>
+                </div>
+                <div class="no-matches" id="noMatches" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <p>No matches found matching your criteria.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Football Predictions Pro. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="predictions.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 {
   "mozzartedge": [
     {
-      "match": "Chelsea vs Wolves",
+      "match": "Roma vs Atalanta",
       "kickoff": "7:15 PM",
       "prediction": "Over 2.5",
       "odds": 2.15,
@@ -9,7 +9,7 @@
       "status": "upcoming"
     },
     {
-      "match": "Roma vs Juventus",
+      "match": "Bologna vs Lecce",
       "kickoff": "7:20 PM",
       "prediction": "GG",
       "odds": 1.85,
@@ -17,7 +17,7 @@
       "status": "upcoming"
     },
     {
-      "match": "Real Madrid vs Elche",
+      "match": "Cagliari vs Napoli",
       "kickoff": "7:25 PM",
       "prediction": "1 & Over",
       "odds": 2.45,
@@ -25,7 +25,7 @@
       "status": "upcoming"
     },
     {
-      "match": "Wolfsburg vs Dortmund",
+      "match": "RB Leipzig vs Borussia Dortmund",
       "kickoff": "7:30 PM",
       "prediction": "Over 1.5",
       "odds": 1.65,
@@ -33,7 +33,7 @@
       "status": "upcoming"
     },
     {
-      "match": "Milan Giants vs Munich Eagles",
+      "match": "CA Banfield vs Tigre",
       "kickoff": "7:35 PM",
       "prediction": "2 & Over",
       "odds": 2.75,
@@ -43,7 +43,7 @@
   ],
   "betika": [
     {
-      "match": "Liverpool vs Manchester United",
+      "match": "Liverpool vs Aston Villa",
       "kickoff": "8:00 PM",
       "prediction": "Over 2.5",
       "odds": 2.10,
@@ -67,7 +67,7 @@
       "status": "upcoming"
     },
     {
-      "match": "Sunderland vs Aston Villa",
+      "match": "Sunderland vs West Ham",
       "kickoff": "8:15 PM",
       "prediction": "Over 1.5",
       "odds": 1.75,
@@ -75,7 +75,7 @@
       "status": "upcoming"
     },
     {
-      "match": "West Ham vs Crystal Palace",
+      "match": "Wolves vs Crystal Palace",
       "kickoff": "8:20 PM",
       "prediction": "2 & Over",
       "odds": 2.60,
@@ -85,7 +85,7 @@
   ],
   "odibet": [
     {
-      "match": "Real Madrid vs Barcelona",
+      "match": "Real Sociedad vs Barcelona",
       "kickoff": "8:40 PM",
       "prediction": "Over 2.5",
       "odds": 2.25,
@@ -93,7 +93,7 @@
       "status": "upcoming"
     },
     {
-      "match": "Bayern Munich vs Borussia Dortmund",
+      "match": "Bayern Leverkusen vs Hertha BSC",
       "kickoff": "8:45 PM",
       "prediction": "GG",
       "odds": 1.80,
@@ -109,7 +109,7 @@
       "status": "upcoming"
     },
     {
-      "match": "Juventus vs Inter Milan",
+      "match": "Lille vs Monaco",
       "kickoff": "8:55 PM",
       "prediction": "Over 1.5",
       "odds": 1.70,
@@ -193,7 +193,7 @@
   ],
   "blog": [
     {
-      "title": "How to Maximize Your Virtual League Winnings",
+      "title": "How to Maximize Your Daily Winnings",
       "excerpt": "Learn the strategies that top players use to consistently win in virtual leagues. Discover the patterns, timing, and betting strategies that can significantly increase your success rate.",
       "category": "Strategy",
       "date": "2024-01-15",
@@ -233,7 +233,7 @@
       "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
-      "title": "Common Mistakes to Avoid in Virtual League Betting",
+      "title": "Common Mistakes to Avoid in Betting",
       "excerpt": "Learn from the mistakes of others. We've compiled the most common errors that bettors make and how to avoid them to improve your success rate.",
       "category": "Tips",
       "date": "2024-01-11",

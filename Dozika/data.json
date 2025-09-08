@@ -1,0 +1,1122 @@
+{
+  "generated_at": "2025-09-06",
+  "note": "Two-way markets only. Probabilities are heuristics (no guarantees). Use bankroll discipline.",
+  "matches": [
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Bolton Wanderers",
+      "away": "AFC Wimbledon",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.54
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.52
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Doncaster Rovers",
+      "away": "Bradford City",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.54
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.52
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Huddersfield Town",
+      "away": "Peterborough United",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.54
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.52
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Lincoln City",
+      "away": "Wigan Athletic",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.54
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.52
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Plymouth Argyle",
+      "away": "Stockport County",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.54
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.52
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Port Vale",
+      "away": "Leyton Orient",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Rotherham United",
+      "away": "Exeter City",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.54
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.52
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Wycombe Wanderers",
+      "away": "Mansfield Town",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.54
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.52
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "14:30",
+      "home": "Newport County",
+      "away": "Bristol Rovers",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.65
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.6
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.49
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.53
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": false,
+            "confidence": 0.63
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Barnet",
+      "away": "Shrewsbury Town",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Barrow",
+      "away": "Swindon Town",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Cambridge United",
+      "away": "Oldham Athletic",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Cheltenham Town",
+      "away": "Accrington Stanley",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Colchester United",
+      "away": "Crewe Alexandra",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Harrogate Town",
+      "away": "Crawley Town",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "MK Dons",
+      "away": "Grimsby Town",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.54
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.52
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Notts County",
+      "away": "Fleetwood Town",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.54
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.52
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Salford City",
+      "away": "Tranmere Rovers",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Walsall",
+      "away": "Chesterfield",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "19:30",
+      "home": "Bromley",
+      "away": "Gillingham",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "14:30",
+      "home": "Altrincham",
+      "away": "Sutton United",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.65
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.6
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.49
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.53
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": false,
+            "confidence": 0.63
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Boreham Wood",
+      "away": "Morecambe",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Boston United",
+      "away": "Solihull Moors",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Carlisle United",
+      "away": "Truro City",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Forest Green Rovers",
+      "away": "Hartlepool United",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Rochdale",
+      "away": "Braintree Town",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Scunthorpe United",
+      "away": "Wealdstone",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Southend United",
+      "away": "FC Halifax Town",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.54
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.52
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Tamworth",
+      "away": "Eastleigh",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Woking",
+      "away": "Gateshead FC",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.52
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.5
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    },
+    {
+      "competition": "England",
+      "time": "17:00",
+      "home": "Yeovil Town",
+      "away": "York City",
+      "predictions": {
+        "double_chance": {
+          "market": "1X_or_X2",
+          "pick": "1X",
+          "confidence": 0.68
+        },
+        "goals_over_1_5": {
+          "pick": true,
+          "probability": 0.64
+        },
+        "goals_over_2_5": {
+          "pick": false,
+          "probability": 0.54
+        },
+        "both_teams_to_score": {
+          "market": "GG_vs_NG",
+          "pick": "NG",
+          "probability": 0.52
+        },
+        "team_goals": {
+          "home_over_1_5": {
+            "pick": true,
+            "confidence": 0.66
+          },
+          "away_over_1_5": {
+            "pick": false,
+            "confidence": 0.45
+          }
+        }
+      }
+    }
+  ]
+}

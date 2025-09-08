@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Betting Predictions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <i class="fas fa-futbol"></i>
+                Football Predictions Pro
+            </h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="predictions.html" class="nav-link">All Predictions</a>
+                <a href="#stats" class="nav-link">Statistics</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Performance Statistics Section -->
+        <section class="stats-section">
+            <div class="container">
+                <h2 class="section-title">Performance Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-value" id="winRate">85%</h3>
+                            <p class="stat-label">Win Rate</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-value" id="roi">+24.5%</h3>
+                            <p class="stat-label">ROI</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-value" id="winningPicks">127</h3>
+                            <p class="stat-label">Winning Picks</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-value" id="totalPicks">149</h3>
+                            <p class="stat-label">Total Picks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filters Section -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <label for="leagueFilter" class="filter-label">
+                            <i class="fas fa-filter"></i>
+                            Filter by League
+                        </label>
+                        <select id="leagueFilter" class="filter-select">
+                            <option value="all">All Leagues</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="predictionFilter" class="filter-label">
+                            <i class="fas fa-brain"></i>
+                            Filter by Prediction Type
+                        </label>
+                        <select id="predictionFilter" class="filter-select">
+                            <option value="all">All Predictions</option>
+                            <option value="1X">1X Predictions</option>
+                            <option value="X2">X2 Predictions</option>
+                            <option value="over1.5">Over 1.5</option>
+                            <option value="over2.5">Over 2.5</option>
+                            <option value="gg">GG (Both Teams Score)</option>
+                            <option value="ng">NG (No Goals)</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="confidenceFilter" class="filter-label">
+                            <i class="fas fa-shield-alt"></i>
+                            Filter by Confidence
+                        </label>
+                        <select id="confidenceFilter" class="filter-select">
+                            <option value="all">All Confidence Levels</option>
+                            <option value="high">High Confidence</option>
+                            <option value="medium">Medium Confidence</option>
+                            <option value="low">Low Confidence</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Odds Section -->
+        <section class="best-odds-section">
+            <div class="container">
+                <h2 class="section-title">Best Odds Today</h2>
+                <p class="section-subtitle">Top value picks with highest confidence levels</p>
+                
+                <div class="odds-grid" id="oddsGrid">
+                    <!-- Best odds will be dynamically generated here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Matches Section -->
+        <section class="matches-section">
+            <div class="container">
+                <h2 class="section-title">Today's Predictions</h2>
+                <div class="matches-grid" id="matchesGrid">
+                    <!-- Match cards will be dynamically generated here -->
+                </div>
+                <div class="loading" id="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading predictions...</p>
+                </div>
+                <div class="no-matches" id="noMatches" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <p>No matches found matching your criteria.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Football Predictions Pro. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
